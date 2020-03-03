@@ -41,7 +41,7 @@ export default class AddNote extends React.Component {
     let note = {
         note_name: this.state.noteName.value,
         date_modified: new Date().toISOString(),
-        folder_idd: this.state.folderId.value,
+        folder_id: this.state.folderId.value,
         content: this.state.content.value
     }
 
@@ -116,7 +116,7 @@ export default class AddNote extends React.Component {
           </label>
           <select onChange={e => this.setFolderId(e.target.value)} id="folderSelect">
             <option value=''>Select A Folder</option>
-            {this.context.folders.map( folder => <option value={folder.id}>{folder.name}</option>)}
+            {this.context.folders.map( folder => <option value={folder.id}>{folder.folder_name}</option>)}
           </select>
           <label htmlFor="content">
               Content
