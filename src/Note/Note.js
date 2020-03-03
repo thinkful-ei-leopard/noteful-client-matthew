@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { format } from 'date-fns'
+// import { format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ApiContext from '../ApiContext'
 import config from '../config'
@@ -25,8 +25,7 @@ export default class Note extends React.Component {
     })
       .then(res => {
         if (!res.ok)
-          return res.json().then(e => Promise.reject(e))
-        return res.json()
+          return Promise.reject(res.statusText);
       })
       .then(() => {
         this.context.deleteNote(noteId)
@@ -71,10 +70,10 @@ export default class Note extends React.Component {
 }
 
 Note.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string,
   modified: PropTypes.string,
-  folderId: PropTypes.string,
+  folderId: PropTypes.number,
   content: PropTypes.string,
   onDeleteNote: PropTypes.func.isRequired
 }

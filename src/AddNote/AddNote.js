@@ -58,7 +58,7 @@ export default class AddNote extends React.Component {
         }
         return resp.json();
     })
-    .then(() => {
+    .then(note => {
         this.context.addNote(note);
 
         this.props.history.goBack();
@@ -116,7 +116,7 @@ export default class AddNote extends React.Component {
           </label>
           <select onChange={e => this.setFolderId(e.target.value)} id="folderSelect">
             <option value=''>Select A Folder</option>
-            {this.context.folders.map( folder => <option value={folder.id}>{folder.folder_name}</option>)}
+            {this.context.folders.map( folder => <option key={folder.id} value={folder.id}>{folder.folder_name}</option>)}
           </select>
           <label htmlFor="content">
               Content
