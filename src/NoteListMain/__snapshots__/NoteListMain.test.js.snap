@@ -10,7 +10,20 @@ exports[`NoteListMain component renders a .NoteListMain by default 1`] = `
   >
     <NavCircleButton
       className="NoteListMain__add-note-button"
-      tag={[Function]}
+      tag={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Link",
+          "propTypes": Object {
+            "innerRef": [Function],
+            "onClick": [Function],
+            "replace": [Function],
+            "target": [Function],
+            "to": [Function],
+          },
+          "render": [Function],
+        }
+      }
       to="/add-note"
       type="button"
     >
@@ -28,6 +41,7 @@ exports[`NoteListMain component renders a .NoteListMain by default 1`] = `
         rotation={null}
         size={null}
         spin={false}
+        swapOpacity={false}
         symbol={false}
         title=""
         transform={null}

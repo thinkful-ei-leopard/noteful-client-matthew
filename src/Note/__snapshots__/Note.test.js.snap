@@ -8,12 +8,12 @@ exports[`Note component renders a .Note by default 1`] = `
     className="Note__title"
   >
     <Link
-      replace={false}
       to="/note/undefined"
     />
   </h2>
   <button
     className="Note__delete"
+    onClick={[Function]}
     type="button"
   >
     <FontAwesomeIcon
@@ -30,6 +30,7 @@ exports[`Note component renders a .Note by default 1`] = `
       rotation={null}
       size={null}
       spin={false}
+      swapOpacity={false}
       symbol={false}
       title=""
       transform={null}
@@ -47,9 +48,7 @@ exports[`Note component renders a .Note by default 1`] = `
        
       <span
         className="Date"
-      >
-        Invalid Date
-      </span>
+      />
     </div>
   </div>
 </div>
@@ -63,7 +62,6 @@ exports[`Note component renders the Note given props 1`] = `
     className="Note__title"
   >
     <Link
-      replace={false}
       to="/note/a"
     >
       test-class-name
@@ -71,6 +69,7 @@ exports[`Note component renders the Note given props 1`] = `
   </h2>
   <button
     className="Note__delete"
+    onClick={[Function]}
     type="button"
   >
     <FontAwesomeIcon
@@ -87,6 +86,7 @@ exports[`Note component renders the Note given props 1`] = `
       rotation={null}
       size={null}
       spin={false}
+      swapOpacity={false}
       symbol={false}
       title=""
       transform={null}
@@ -105,7 +105,7 @@ exports[`Note component renders the Note given props 1`] = `
       <span
         className="Date"
       >
-        15th Jan 2019
+        <Component />
       </span>
     </div>
   </div>
