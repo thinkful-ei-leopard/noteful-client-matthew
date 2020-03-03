@@ -2,7 +2,6 @@ import React from "react";
 import ApiContext from "../ApiContext";
 import NotefulForm from "../NotefulForm/NotefulForm";
 import config from '../config'
-import uuidv4 from 'uuid/v4';
 
 import './AddNote.css'
 
@@ -40,10 +39,9 @@ export default class AddNote extends React.Component {
     }
 
     let note = {
-        id: uuidv4(),
-        name: this.state.noteName.value,
-        modified: new Date().toISOString(),
-        folderId: this.state.folderId.value,
+        note_name: this.state.noteName.value,
+        date_modified: new Date().toISOString(),
+        folder_idd: this.state.folderId.value,
         content: this.state.content.value
     }
 

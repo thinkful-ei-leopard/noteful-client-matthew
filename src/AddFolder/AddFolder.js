@@ -3,7 +3,6 @@ import ApiContext from "../ApiContext";
 import NotefulForm from "../NotefulForm/NotefulForm";
 
 import config from '../config'
-import uuidv4 from 'uuid/v4';
 
 import './AddFolder.css'
 
@@ -22,8 +21,7 @@ export default class AddFolder extends React.Component {
     event.preventDefault();
 
     let folder = {
-        id: uuidv4(),
-        name: this.state.folderName.value
+        folder_name: this.state.folderName.value
     }
 
     fetch(`${config.API_ENDPOINT}/folders`, {
