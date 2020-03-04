@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "alias": "noteful",
-  "name": "noteful-client",
+  "alias": "averaqedev-noteful",
+  "name": "averaqedev-noteful-client",
   "routes": [
     {
       "src": "^/static/(.*)",
